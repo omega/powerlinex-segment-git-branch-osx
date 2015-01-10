@@ -51,7 +51,11 @@ def branch(pl, segment_info, status_colors=False):
             return None
         return [{
             'contents': branch or 'No branch?',
-            'highlight_group': [ 'branch_dirty' if status else 'branch_clean', 'branch']
+            'highlight_groups': [ 'branch_dirty', 'branch' ] if status else [ 'branch_clean', 'branch' ]
         }]
 
+    else:
+        return [{
+            'contents': branch or 'No branch?'
+        }]
 
