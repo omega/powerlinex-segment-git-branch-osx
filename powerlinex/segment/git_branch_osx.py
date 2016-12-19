@@ -21,7 +21,7 @@ def branch(pl, segment_info, status_colors=False):
                 branch = line[2:]
 
     except OSError as e:
-        print "error getting branch"
+        print("error getting branch")
         branch = 'error'
         raise
 
